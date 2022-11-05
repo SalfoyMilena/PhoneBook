@@ -1,0 +1,41 @@
+.contact-item-container{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.849);
+    color: white;
+    margin-bottom: 3px;
+    .left-container{
+        display: flex;
+        .personal-details-container{
+            .name{
+                display: flex;
+                font-weight: bold;
+                p{
+                    margin-right: 5px;
+                }
+            }
+            .location{
+                display: flex;
+                p{
+                    margin-right: 5px;
+                }
+            }
+        }
+        .image{
+            margin-right: 15px;
+            img{
+                border-radius: 50%;
+            }
+        }
+    }
+    .right-container{
+        .menu{
+            background-color: transparent;
+            border: none;
+            font-size: 30px;
+            color: white;
+        }
+    }
+}

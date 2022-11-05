@@ -1,0 +1,31 @@
+.phone-book-container{
+    .contacts-container{
+        background-color: black;
+        position: relative;
+        .contact{
+            .background-box{
+                position: absolute;
+                top: 0px;
+                left: 30%;
+                background-color: #fdd519;
+                width: 75%;
+                height: 90%;
+                z-index: 1;
+                margin-top: 30px;
+                border-radius: 5px;
+            }
+            // width: fit-content;
+            // position: relative;
+            // display: flex;
+            // align-items: center;
+            // justify-content: center;
+            position: relative;
+            margin: 0 auto;
+            width: fit-content;
+            background-color: #070912;
+            z-index: 3;
+            padding-top: 60px;
+            
+        }
+    }
+}

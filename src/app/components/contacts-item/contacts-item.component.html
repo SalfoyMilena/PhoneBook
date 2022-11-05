@@ -1,0 +1,40 @@
+<div class="contact-item-container">
+    <div class="left-container">
+        <div class="image">
+            <img src="{{user.picture.medium}}" alt="">
+        </div>
+        <div class="personal-details-container">
+            <div class="name">
+                <p class="title">{{user.name.title}}</p>
+                <p class="first">{{user.name.first}}</p>
+                <p class="last">{{user.name.last}}</p>
+            </div>
+            <div class="email">
+                <p>{{user.email}}</p>
+            </div>
+            <div class="location">
+                <p class="street-name">{{user.location.street.name}},</p>
+                <p class="street-number">{{user.location.street.number}},</p>
+                <p class="city">{{user.location.city}},</p>
+                <p class="country">{{user.location.country}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="right-container">
+        <button class="menu" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            ...
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="onClick('edit')">
+              <span>Edit</span>
+            </button>
+            <button mat-menu-item (click)="onClick('delete')">
+              <span>Delete</span>
+            </button>
+          </mat-menu>
+    </div>
+</div>
+
+<!-- pop-up -->
+<app-edit-pop-up *ngIf="openEditPopUp" (ClosePopUp)="ClosePopUp($event)" [user]=user></app-edit-pop-up>
+<app-validation-pop-up [uuid]="user.login.uuid" *ngIf="openDeletePopUp" (DeleteUserUuid)="DeleteUser($event)" (ClosePopUp)="ClosePopUp($event)"></app-validation-pop-up>

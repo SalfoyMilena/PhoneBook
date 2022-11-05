@@ -1,0 +1,103 @@
+.edit-pop-up-container{
+    height: 100%;
+    width: 60vw;
+    text-align: center;
+    position: absolute;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.548);
+    top: -3%;
+    left:-10%;
+    display: flex;
+    justify-content: center;
+    right: 0;
+    margin: 0 auto;
+    color: white;
+    .form{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        background-color: #272727;
+        height: fit-content;
+        padding: 0px 10px 10px 10px;
+        .top-container{
+        background-color: #fdd519;
+        width: 500px;
+        align-self: center;
+        .avatar{
+            border-radius: 50%;
+            border: none;
+            &.unknown{
+                border-radius: 50%;
+                width: 40px;
+            }
+        }
+        .name-details{
+            display: flex;
+            justify-content: space-around;
+            div{
+                display: flex;
+                flex-direction: column;
+                input{
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: black 1px solid;
+                    height: 30px;        
+                }
+                label{
+                    align-self: baseline;
+                    color: white;
+                    // text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+                }
+            }
+        }
+     }
+    
+        .email{
+        display: flex;
+        flex-direction: column;
+        input{
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+        }
+        label{
+            align-self: baseline;
+        }
+        }
+        .location{
+        div{
+            display: flex;
+            flex-direction: column;
+            label{
+                align-self: baseline;
+            }
+            input{
+                height: 30px;
+                border-radius: 5px;
+                /* padding: 5px; */
+                border: none;
+            }
+        }
+    
+    }
+    .submit{
+        width: 50%;
+        align-self: center;
+        margin-top: 20px;
+        height: 40px;
+        background-color: #fdd519;
+        border: none;
+        font-size: 25px;
+        border-radius: 4px;
+    }
+  }
+   .closeBtn{
+    position: fixed;
+    right: 33%;
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+   }
+}

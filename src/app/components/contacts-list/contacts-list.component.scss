@@ -1,0 +1,20 @@
+.contact-list-container{
+    background-color: white;
+    position: relative;
+    z-index: 2;
+    border-radius: 5px;
+    width: 50vw;
+}
+.addUserBtn{
+    width: 200px;
+    height: 60px;
+    border-radius: 3px;
+    background-color: #fdd519;
+    box-shadow: 5px 10px #fceca683;
+    z-index: 4;
+    position: fixed;
+    bottom: 5vh;
+    right: 0px;
+    border: none;
+    font-size: 30px;
+}

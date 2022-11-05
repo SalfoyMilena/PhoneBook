@@ -1,0 +1,10 @@
+<div class="contact-list-container" *ngIf="users">
+    <div class="c" *ngFor="let user of users" >
+        <app-contacts-item  (DeleteUserUuid)="deleteUser($event)"  [user]=user></app-contacts-item>
+    </div>
+    <div class="add-user-pop-up" *ngIf="openPopUp">
+        <app-edit-pop-up *ngIf="openPopUp" (ClosePopUp)="CloseOpenPopUp($event)"></app-edit-pop-up>
+    </div>
+</div>
+<button class="addUserBtn"  (click)="CloseOpenPopUp()" (AddUser)="AddUserPopUp($event)">Add User</button>
+

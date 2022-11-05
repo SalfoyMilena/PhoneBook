@@ -1,0 +1,49 @@
+<div class="edit-pop-up-container">
+    <form class="form" #editUser="ngForm" (ngSubmit)="submit(editUser)">
+        <div class="top-container">
+            <h1>Edit User</h1>
+            <img class="avatar" [ngClass]="{'unknown':!user}" src="{{user?.picture.medium ? user?.picture.medium :'https://cdn-icons-png.flaticon.com/512/1250/1250689.png'}}" alt="avatar">
+            <div class="name-details">
+                <div class="title">
+                    <input name="title" class="form-control" type="text" required [ngModel]="user?.name?.title">
+                    <label for="title">Title</label>
+                </div>
+                <div class="first">
+                    <input name="first" class="form-control" type="text" minlength="3" [ngModel]="user?.name.first" ngModel>
+                    <label for="first">First Name</label>
+                </div>
+                <div class="last">
+                    <input name="last" class="form-control" type="text" minlength="3" [ngModel]="user?.name.last" ngModel>
+                    <label for="last">Last Name</label>
+                </div>
+            </div>
+        </div>
+        <div class="email">
+            <label for="email">Email</label>
+            <input [ngClass]="{'invalid':email.valid}" name="email" class="form-control" type="text" email="true"
+                #email=ngModel [ngModel]="user?.email" ngModel>
+        </div>
+        <div class="location">
+            <div class="street-name">
+                <label for="street-name">Street Name</label>
+                <input name="street-name" class="form-control" type="text" [ngModel]="user?.location.street.name"
+                    ngModel>
+            </div>
+            <div class="street-number">
+                <label for="street-number">Street Number</label>
+                <input name="street-number" class="form-control" type="text" [ngModel]="user?.location.street.number"
+                    ngModel>
+            </div>
+            <div class="city">
+                <label for="city">City</label>
+                <input name="city" class="form-control" type="text" [ngModel]="user?.location.city" ngModel>
+            </div>
+            <div class="country">
+                <label for="country">Country</label>
+                <input name="country" class="form-control" type="text" [ngModel]="user?.location.country" ngModel>
+            </div>
+        </div>
+        <button class="submit"  type="submit">save</button>
+    </form>
+    <button class="closeBtn" (click)="onClose()">X</button>
+</div>
